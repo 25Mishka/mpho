@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Mpho!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Chucky's Birthday Party!</h1>
+      <div id="question-container" class="question-container">
+        <div id="question1" class="question">
+          <p>
+            Question 1: When is Mpho's birthday? Just type in the day of the
+            month
+          </p>
+          <input type="text" id="answer1" />
+          <button onclick="checkAnswer(1, '21')">Submit</button>
+        </div>
+        <div id="question2" class="question hidden">
+          <p>Question 2: How old is Mpho?</p>
+          <input type="text" id="answer2" />
+          <button onclick="checkAnswer(2, '35')">Submit</button>
+        </div>
+        <div id="question3" class="question hidden">
+          <p>Question 3: Who does Mangie compare Mpho to from The Lion King?</p>
+          <input type="text" id="answer3" />
+          <button onclick="checkAnswer(3, 'timon')">Submit</button>
+        </div>
+      </div>
+      <div id="result-container" class="result-container hidden">
+        <img
+          src="https://i.pinimg.com/originals/b7/c5/e3/b7c5e312e48b7740a0c18df4175387b8.jpg"
+          id="chucky"
+          class="chucky hidden"
+        />
+        <div id="speech-bubble" class="speech-bubble"></div>
+      </div>
+      <div class="audio-controls">
+        <button onclick="playAudio()">Play Spooky Song</button>
+        <button onclick="pauseAudio()">Pause Spooky Song</button>
+      </div>
+      <!-- Corrected audio src to a valid MP3 file -->
+      <audio id="spookyAudio" src="sound.mp3"></audio>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
